@@ -67,10 +67,10 @@ public class ConsumerController
             return "Record updated Successfully";
         }
     }
-        @PutMapping("/del/{id}")
+        @DeleteMapping("/del/{cid}")
         public String deleteConsumerData(@PathVariable int Cid)
         {
-            crepo.deleteById(Cid);
+            crepo.deleteById(cid);
             return "data has been deleted successfully";
     }
    @GetMapping("/both/{fname}/{lname}")
